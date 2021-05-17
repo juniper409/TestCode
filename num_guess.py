@@ -15,11 +15,6 @@ while play_loop == True:
         guess = int(input("Guess a number: "))
         if guess == rand:
             print("CORRECT!")
-            play_again = input("Play again? ")
-    if play_again == "yes" or play_again == "y":
-        play_loop = True
-    else:
-        play_loop = False
         else:
-            print("Incorrect. Guess again!") 
-  
+            print("Incorrect. Guess again!")
+            play_loop = input("Play again? ")
