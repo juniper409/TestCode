@@ -2,19 +2,16 @@ import random
 
 min = 1
 max = 10
-go = "yes"
-play_loop = True
-play_again = "yes"
+play_loop = "yes"
 
-while play_loop == True:
-
+print("Guess a number between 1 and 10. Good Luck!")
+while play_loop == "yes" or "y":
     rand = int(random.randint(min, max))
-
-    print("Guess a number between 1 and 10. Good Luck!")
-    while go == "yes" or go == "y":
-        guess = int(input("Guess a number: "))
-        if guess == rand:
-            print("CORRECT!")
-        else:
-            print("Incorrect. Guess again!")
-            play_loop = input("Play again? ")
+    guess = int(input("Guess a number: "))
+    if guess == rand:
+        print("CORRECT!")
+        play_loop = input("Play Again? ")
+    else:
+        print("Incorrect. Guess again!")
+    if play_loop == "No" or play_loop == "n":
+        break
