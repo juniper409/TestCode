@@ -1,4 +1,5 @@
 import random
+import os
 
 min = 1
 max = 10
@@ -11,7 +12,9 @@ while play_loop == "yes" or "y":
     if guess == rand:
         print("CORRECT!")
         play_loop = input("Play Again? ")
+        os.system("clear")
     else:
         print("Incorrect. Guess again!")
     if play_loop == "No" or play_loop == "n":
+        print("GOODBYE!")
         break
